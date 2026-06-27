@@ -1,39 +1,39 @@
 # 🎓 Sistema de Controle Acadêmico
 
-> [cite_start]**Nota:** Este projeto foi desenvolvido como trabalho final [cite: 2] [cite_start]da disciplina de Programação WEB - Ruby on Rails [cite: 1][cite_start], ministrada pelo Professor Dr. Constantino Augusto Dias Neto [cite: 1] [cite_start]no Centro de Tecnologia e Urbanismo (CTU) da Universidade Estadual do Piauí (UESPI)[cite: 1].
+**Nota:** Este projeto foi desenvolvido como trabalho final da disciplina de Programação WEB - Ruby on Rails, ministrada pelo Professor Dr. Constantino Augusto Dias Neto no Centro de Tecnologia e Urbanismo (CTU) da Universidade Estadual do Piauí (UESPI), sido feito em dupla por Rodrigo Berger e Inácio Barroso durante o Bloco 4.
 
-## 💻 Sobre o projeto
-[cite_start]O sistema consiste em uma aplicação web desenvolvida em Ruby on Rails para realizar o Controle Acadêmico[cite: 33]. O objetivo é aplicar na prática os conceitos avançados do framework, incluindo uso de gems essenciais, validações e manipulação de arquivos.
+## Sobre o projeto
+O sistema consiste em uma aplicação web desenvolvida em Ruby on Rails para realizar o Controle Acadêmico. O objetivo é aplicar na prática os conceitos avançados do framework, incluindo uso de gems essenciais, validações e manipulação de arquivos.
 
-### ⚙️ Funcionalidades Principais
-[cite_start]O sistema implementa o ciclo de vida completo dos dados (CRUD)[cite: 22], permitindo:
-- [cite_start]Inserção de registros[cite: 23].
-- [cite_start]Exclusão de registros[cite: 24].
-- [cite_start]Consulta de registros[cite: 25].
-- [cite_start]Alteração de registros[cite: 26].
+### Funcionalidades Principais
+O sistema implementa o ciclo de vida completo dos dados (CRUD), permitindo:
+- Inserção de registros.
+- Exclusão de registros.
+- Consulta de registros.
+- Alteração de registros.
 
 **Recursos extras implementados:**
-- [cite_start]**Autenticação:** Permite autenticação segura no sistema[cite: 7].
-- [cite_start]**Paginação:** Criação de uma lista paginada para exibição de registros na tela[cite: 4].
-- [cite_start]**Geração de PDF:** Permite gerar um arquivo PDF da listagem de tela de consulta[cite: 14].
-- [cite_start]**Geração de CSV:** Na tela principal do APP, existe a funcionalidade de gerar um arquivo CSV com pelo menos 3 campos (como id, Aluno, idade)[cite: 17, 19].
-- [cite_start]**Regras de Negócio:** O sistema conta com validações e associações entre os modelos[cite: 15].
+- **Autenticação:** Permite autenticação segura no sistema.
+- **Paginação:** Criação de uma lista paginada para exibição de registros na tela.
+- **Geração de PDF:** Permite gerar um arquivo PDF da listagem de tela de consulta.
+- **Geração de CSV:** Na tela principal do APP, existe a funcionalidade de gerar um arquivo CSV com pelo menos 3 campos (como id, Aluno, idade).
+- **Regras de Negócio:** O sistema conta com validações e associações entre os modelos.
 
-## 🗂️ Entidades do Sistema
-[cite_start]O banco de dados foi modelado para gerenciar o contexto escolar, possuindo pelo menos as seguintes 3 entidades principais[cite: 27]:
-- [cite_start]`Aluno`[cite: 33].
-- [cite_start]`Disciplinas`[cite: 33].
-- [cite_start]`Matrícula`[cite: 33].
+## Entidades do Sistema
+O banco de dados foi modelado para gerenciar o contexto escolar, possuindo pelo menos as seguintes 3 entidades principais:
+- `Aluno`.
+- `Disciplinas`.
+- `Matrícula`.
 
-## 🛠️ Tecnologias e Plugins Utilizados
-- [cite_start]**Framework base:** Ruby on Rails[cite: 3].
-- [cite_start]**Layout/Estilização:** Twitter Bootstrap, que permite desenvolver sites rapidamente e ter um layout profissional[cite: 10].
+## Tecnologias e Plugins Utilizados
+- **Framework base:** Ruby on Rails.
+- **Layout/Estilização:** Twitter Bootstrap, que permite desenvolver sites rapidamente e ter um layout profissional.
 - **Gems Principais:**
-  - [cite_start]`devise`: Para gerenciar a autenticação e login de usuários[cite: 7].
-  - [cite_start]`kaminari`: Para a paginação das views[cite: 4].
-  - [cite_start]`prawn`: Para a construção e exportação dos relatórios em PDF[cite: 14].
+  - `devise`: Para gerenciar a autenticação e login de usuários.
+  - `kaminari`: Para a paginação das views.
+  - `prawn`: Para a construção e exportação dos relatórios em PDF.
 
-## 🚀 Como executar o projeto
+## Como executar o projeto
 
 ### Pré-requisitos
 Certifique-se de ter o Ruby, o Rails e o gerenciador de pacotes Bundler instalados na sua máquina.
