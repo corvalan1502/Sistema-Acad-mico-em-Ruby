@@ -1,0 +1,32 @@
+<%= form_with(model: aluno) do |form| %>
+  <% if aluno.errors.any? %>
+    <div class="alert alert-danger">
+      <h5><%= pluralize(aluno.errors.count, "erro") %> impediu o cadastro:</h5>
+      <ul class="mb-0">
+        <% aluno.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :nome, "Nome", class: "form-label" %>
+    <%= form.text_field :nome, class: "form-control", placeholder: "Digite o nome completo" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :cpf, "CPF", class: "form-label" %>
+    <%= form.text_field :cpf, class: "form-control", placeholder: "Somente números (ex: 12345678901)" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :data_nascimento, "Data de Nascimento", class: "form-label" %>
+    <%= form.date_field :data_nascimento, class: "form-control" %>
+  </div>
+
+  <div class="d-flex gap-2">
+    <%= form.submit "Salvar", class: "btn btn-success" %>
+    <%= link_to "Cancelar", alunos_path, class: "btn btn-secondary" %>
+  </div>
+<% end %>

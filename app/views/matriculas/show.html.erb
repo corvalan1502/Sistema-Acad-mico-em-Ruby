@@ -1,0 +1,31 @@
+<% content_for :title, "Detalhes da Matrícula" %>
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <h1>Detalhes da Matrícula</h1>
+  <%= link_to "Voltar", matriculas_path, class: "btn btn-secondary" %>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <div class="mb-3">
+      <strong>Aluno:</strong>
+      <%= @matricula.aluno.nome %>
+    </div>
+    <div class="mb-3">
+      <strong>Disciplina:</strong>
+      <%= @matricula.disciplina.nome %>
+    </div>
+    <div class="mb-3">
+      <strong>Semestre:</strong>
+      <%= @matricula.semestre %>
+    </div>
+    <div class="mb-3">
+      <strong>Nota:</strong>
+      <%= @matricula.nota %>
+    </div>
+  </div>
+  <div class="card-footer d-flex gap-2">
+    <%= link_to "Editar", edit_matricula_path(@matricula), class: "btn btn-warning" %>
+    <%= link_to "Excluir", @matricula, data: { turbo_method: :delete, turbo_confirm: "Tem certeza?" }, class: "btn btn-danger" %>
+  </div>
+</div>

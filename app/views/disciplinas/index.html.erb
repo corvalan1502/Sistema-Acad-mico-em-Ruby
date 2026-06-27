@@ -1,0 +1,35 @@
+<% content_for :title, "Disciplinas" %>
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <h1>Disciplinas</h1>
+  <%= link_to "Nova Disciplina", new_disciplina_path, class: "btn btn-primary" %>
+</div>
+
+<table class="table table-striped table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>Nome</th>
+      <th>Código</th>
+      <th>Carga Horária (h)</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @disciplinas.each do |disciplina| %>
+      <tr>
+        <td><%= disciplina.nome %></td>
+        <td><%= disciplina.codigo %></td>
+        <td><%= disciplina.carga_horaria %></td>
+        <td>
+          <%= link_to "Ver", disciplina, class: "btn btn-sm btn-info" %>
+          <%= link_to "Editar", edit_disciplina_path(disciplina), class: "btn btn-sm btn-warning" %>
+          <%= link_to "Excluir", disciplina, data: { turbo_method: :delete, turbo_confirm: "Tem certeza?" }, class: "btn btn-sm btn-danger" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div class="d-flex justify-content-center mt-4">
+  <%= paginate @disciplinas %>
+</div>

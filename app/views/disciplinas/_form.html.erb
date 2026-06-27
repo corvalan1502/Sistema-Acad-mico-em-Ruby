@@ -1,0 +1,32 @@
+<%= form_with(model: disciplina) do |form| %>
+  <% if disciplina.errors.any? %>
+    <div class="alert alert-danger">
+      <h5><%= pluralize(disciplina.errors.count, "erro") %> impediu o cadastro:</h5>
+      <ul class="mb-0">
+        <% disciplina.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :nome, "Nome", class: "form-label" %>
+    <%= form.text_field :nome, class: "form-control", placeholder: "Digite o nome da disciplina" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :codigo, "Código", class: "form-label" %>
+    <%= form.text_field :codigo, class: "form-control", placeholder: "Digite o código da disciplina" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :carga_horaria, "Carga Horária", class: "form-label" %>
+    <%= form.number_field :carga_horaria, class: "form-control", placeholder: "Digite a carga horária em horas" %>
+  </div>
+
+  <div class="d-flex gap-2">
+    <%= form.submit "Salvar", class: "btn btn-success" %>
+    <%= link_to "Cancelar", disciplinas_path, class: "btn btn-secondary" %>
+  </div>
+<% end %>

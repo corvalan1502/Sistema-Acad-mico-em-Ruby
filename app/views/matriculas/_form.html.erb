@@ -1,0 +1,37 @@
+<%= form_with(model: matricula) do |form| %>
+  <% if matricula.errors.any? %>
+    <div class="alert alert-danger">
+      <h5><%= pluralize(matricula.errors.count, "erro") %> impediu o cadastro:</h5>
+      <ul class="mb-0">
+        <% matricula.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :aluno_id, "Aluno", class: "form-label" %>
+    <%= form.collection_select :aluno_id, Aluno.all, :id, :nome, { prompt: "Selecione um aluno" }, { class: "form-select" } %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :disciplina_id, "Disciplina", class: "form-label" %>
+    <%= form.collection_select :disciplina_id, Disciplina.all, :id, :nome, { prompt: "Selecione uma disciplina" }, { class: "form-select" } %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :semestre, "Semestre", class: "form-label" %>
+    <%= form.text_field :semestre, class: "form-control", placeholder: "Ex: 2026.1" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :nota, "Nota", class: "form-label" %>
+    <%= form.number_field :nota, class: "form-control", placeholder: "Digite a nota (0 a 10)", step: 0.1, min: 0, max: 10 %>
+  </div>
+
+  <div class="d-flex gap-2">
+    <%= form.submit "Salvar", class: "btn btn-success" %>
+    <%= link_to "Cancelar", matriculas_path, class: "btn btn-secondary" %>
+  </div>
+<% end %>

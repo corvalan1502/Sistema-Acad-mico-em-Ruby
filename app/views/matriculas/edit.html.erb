@@ -1,0 +1,8 @@
+<% content_for :title, "Editar Matrícula" %>
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <h1>Editar Matrícula</h1>
+  <%= link_to "Voltar", matriculas_path, class: "btn btn-secondary" %>
+</div>
+
+<%= render "form", matricula: @matricula %>

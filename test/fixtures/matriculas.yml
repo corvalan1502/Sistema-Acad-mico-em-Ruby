@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  aluno: one
+  disciplina: one
+  semestre: MyString
+  nota: 9.99
+
+two:
+  aluno: two
+  disciplina: two
+  semestre: MyString
+  nota: 9.99
